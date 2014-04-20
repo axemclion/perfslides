@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title><%= name%>
+		::
+		<%= description %></title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="<%= description %>
+	">
+	<meta name="author" content="<%= author%>
+	">
+	<link rel="stylesheet" href = "bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href = "css/main.css"/>
+</head>
+<body class = "site">
+	<ul class = "slides">
+		<li>
+			<% include slides/title %></li>
+		<li>
+			<% include slides/shippers %></li>
+		<li>
+			<% include slides/why-perf %></li>
+		<li>
+			<% include slides/what-regression %></li>
+		<li>
+			<% include slides/fixing-regressions %></li>
+		<li>
+			<% include slides/after-measure %></li>
+		<li>
+			<% include slides/graphs %></li>
+		<li>
+			<% include slides/browser-perf %></li>
+		<li>
+			<% include slides/perfjankie %></li>
+		<li>
+			<%include slides/demo %></li>
+		<li>
+			<%include slides/takeaways %></li>
+		<li>
+			<%include slides/thankyou %></li>
+	</ul>
+	<div class="btn-group main-menu hidden-xs">
+		<button type="button" class="prev-slide slide-only btn btn-default">
+			<span class = "glyphicon glyphicon-chevron-left"></span>
+		</button>
+		<button type="button" class="presentation-mode site-only btn btn-default" data-toggle="dropdown">
+			<span class = "glyphicon glyphicon glyphicon-fullscreen"></span>
+		</button>
+		<button type="button" class="presentation-mode slide-only btn btn-default">
+			<span class = "glyphicon glyphicon glyphicon-remove-circle"></span>
+		</button>
+		<button type="button" class="next-slide slide-only btn btn-default">
+			<span class = "glyphicon glyphicon-chevron-right"></span>
+		</button>
+	</div>
+	<script type = "text/javascript" src = "jquery/dist/jquery.js"></script>
+	<script type = "text/javascript" src = "bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type = "text/javascript" src = "js/main.js"></script>
+</body>
+</html>
