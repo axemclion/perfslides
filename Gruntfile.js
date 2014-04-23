@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	var commit = {
-		date: [],
-		hash: []
+		tag: [],
+		seq: []
 	};
 	grunt.initConfig({
 		clean: ['./bin'],
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
 			options: {
 				suite: 'perfSlides - Performance Analysis',
 				urls: ['http://localhost:8080'],
-				time: commit.date,
-				run: commit.hash
+				time: commit.seq,
+				run: commit.tag
 			},
 			local: {
 				options: {
@@ -79,12 +79,13 @@ module.exports = function(grunt) {
 	grunt.registerTask('gitData', function() {
 		var done = this.async();
 		var exec = require('child_process').exec;
-		exec('git show -s --format=%ct', function(err, stdout, stderr) {
-			commit.date.push(stdout);
-			exec('git rev-parse HEAD', function(err, stdout, stderr) {
-				commit.hash.push(stdout.substring(0, 6));
-				done();
-			})
+		exec('git log --format=%B -n 1', function(err, stdout, stderr) {
+			var tag = stdout.match(/<deploy:[\S]*>/ig)[0].replace(/<deploy:|>/g, '');
+			var seq = stdout.match(/<seq:[\S]*>/ig)[0].replace(/<seq:|>/g, '');
+			console.log(tag);
+			commit.tag.push(tag.substring(0, 10));
+			commit.seq.push(seq);
+			done();
 		});
 	})
 
