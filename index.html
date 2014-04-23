@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+<head>
+	<title>perfslides
+		::
+		A sample website to demonstrate the use of browser-perf and perfkanie</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A sample website to demonstrate the use of browser-perf and perfkanie
+	">
+	<meta name="author" content="Parashuram &lt;code@r.nparashuram.com&gt;
+	">
+	<link rel="stylesheet" href = "bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href = "css/main.css"/>
+</head>
+<body class = "site">
+	<ul class = "slides">
+		<li>
+			<div class = "title">
+	<div class = "container">
+		<div class="row">
+			<div class="col-lg-6">
+				<h1>Automating Front End Performance</h1>
+				<h3>and making it a part of continuous integration</h3>
+			</div>
+			<div class="col-lg-6">
+				<img class="img-responsive site-only" src="img/ipad-hand.png" alt="">
+			</div>
+		</div>
+		<div class = "slide-only author">
+			Parashuram &lt;code@r.nparashuram.com&gt;
+		</div>
+	</div>
+</div></li>
+		<li>
+			<div class = "why-performance container">
+	<div class="col-lg-6 col-lg-offset-3">
+		<h1>Why care about performance ?</h1>
+		<h3 class = "site-only">A fast and smooth site always delights the customer</h3>
+		<p class = "site-only">
+			which converts to more revenue, more user engagement, better page ranks, consumes lesser resources ...
+		</p>
+		<div class = "slide-only step">
+			<span class = "glyphicon glyphicon-forward"></span>
+		</div>
+	</div>
+</div></li>
+		<li>
+			<div class = "container what-regression">
+	<h1>Why does a site get slow</h1>
+	<div class="row">
+		<div class="col-lg-4 step">
+			<img  style="background-image: url(img/onecommit.jpg)" class = "slide-only" source = "http://livingfitlovinglife.com/wp-content/uploads/2013/10/istock_end-of-the-rope1.jpg"/>
+			<img style="background-image: url(img/trollface-big.png)" class = " step trollface slide-only" source="http://openclipart.org/detail/146953/troll-face---problem-by-master-sayien">
+			<img src="img/trollface.png" class = "site-only" source="http://openclipart.org/detail/146953/troll-face---problem-by-master-sayien">
+			<h4>One commit</h4>
+			<p>
+				On a friday night by that, in the file no one touches,
+				<br/>
+				by that one guy !!
+			</p>
+		</div>
+
+		<div class="col-lg-4 step">
+			<img style="background-image: url(img/overtime.jpg)" class = "slide-only" source = "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Overloaded_truck.jpg/1280px-Overloaded_truck.jpg"/>
+			<img src="img/time.png" class = "site-only" source = "http://upload.wikimedia.org/wikipedia/commons/2/23/Flat_UI_-_time.png">
+			<h4>
+				<span class = "slide-only">Added</span>
+				Over time
+			</h4>
+			<p>With great code comes great performance problems</p>
+		</div>
+
+		<div class="col-lg-4 step">
+			<img  style="background-image: url(img/clueless.jpg)" class = "slide-only" source = "http://www.flickr.com/photos/plasticrevolver/164351244/in/photostream/"/>
+			<img src="img/heinsenbug.png" class = "site-only" source="http://openclipart.org/image/300px/svg_to_png/190578/forbidden-for-heisenbugs.png">
+			<h4>No clue</h4>
+			<p>What just happened ?</p>
+		</div>
+	</div>
+</div></li>
+		<li>
+			<div class = "fixing-regressions">
+	<div class = "container">
+		<h1><span class = "presentation-only">3 ways of </span>Fixing Performance Regressions</h1>
+		<p class = "speaker-notes">
+			Rules, tools, or a combination of rules and tools can be used to fix performance problems
+		</p>
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a href="#rules" data-toggle="tab">Rules</a>
+			</li>
+			<li class = "step">
+				<a href="#tools" data-toggle="tab">Tools</a>
+			</li>
+			<li class = "step">
+				<a href="#rulestools" data-toggle="tab">Rules + Tools</a>
+			</li>
+			<li class = "step">
+				<a href="#wisdom" data-toggle="tab">Wisdom</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="rules">
+				<h2>Rules</h2>
+				<ul>
+					<li>
+						Shard the domains to increase the number of parallel requests
+					</li>
+					<li>Enclose expensive javascript inside requestAnimationFrames</li>
+					<li>Minize JS, Images and CSS, always zip over the wire</li>
+					<li>
+						Runtime performance checklist
+						<a href = "http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/"></a>
+					</li>
+					<li> <em>Pray to the demo gods before your presentation</em>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-pane" id="tools">
+				<h2>Browser Tools</h2>
+				<div class="row">
+					<div class="col-xs-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<img src="img/chromedev.png" alt="..."/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<img src="img/f12.png" alt="..."/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<img src="img/firefox.png" alt="..."/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="rulestools">
+				<h2>Rules + Tools</h2>
+				<ul>
+					<li>YSlow (<a href = "https://developer.yahoo.com/yslow/">link</a>)</li>
+					<li>Google Page Speed (<a href = "https://developers.google.com/speed/pagespeed/">link</a>)</li>
+					<li>modern.ie Page Scan (<a href = "http://modern.ie">link</a>)</li>
+					<li>Webpagetest.org (<a href = "http://webpagetest.org">link</a>)</li>
+				</ul>
+			</div>
+			<div class="tab-pane" id="wisdom">
+				<img src = "img/zen.png" source="http://upload.wikimedia.org/wikipedia/commons/b/b5/Yoga_Meditation_Pos-410px.png"/>
+			</div>
+		</div>
+	</div>
+</div></li>
+		<li>
+			<div class = "after-measure container">
+	<h1>Measurements done, now what ?</h1>
+	<p class = "speaker-notes">
+		Fixing regressions usually is by measuring the performance problems.
+	</p>
+	<ul class = "list-group">
+		<li class="step list-group-item">
+			<span class = "number">1</span>
+			Run the tests again
+			<span class = "step">and again</span>
+			<span class = "step">and again</span>
+			<span class = "step">and ...</span>
+		</li>
+		<li class="step list-group-item">
+			<span class = "number">2</span>
+			You have the data, you may as well save it
+		</li>
+		<li class="step list-group-item">
+			<span class = "number">3</span>
+			Record it the next time you deploy <span class = "step">and everytime you deploy</span>
+		</li>
+		<li class="step list-group-item">
+			<span class = "number">4</span>
+			Graph the data since you already have historical data
+		</li>
+		<li class="step list-group-item">
+			<span class = "number">5</span>
+			Well, now that you are doing it again anyway <span class = "">why not add it to continuous integration</span>
+		</li>
+	</ul>
+</div></li>
+		<li>
+			<div class = "container graphs">
+	<h1 class = "site-only">Performance Graphs</h1>
+	<div id = "graphs-carousel" class="carousel" data-ride="carousel">
+      <ol class="carousel-indicators site-only">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active step">
+          <img src="img/topcoat.png">
+        </div>
+        <div class="item step">
+          <img src="img/bootstrap.png">
+        </div>
+      </div>
+      <a class="left carousel-control site-only" href="#graphs-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control site-only" href="#graphs-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+</div></li>
+		<li>
+			<div class = "browser-perf container">
+	<p class = "speaker-notes">
+		This presentation is about browser rendering performance, and using variaous techniques to automate the collection of browser rendering performance metrics
+	</p>
+	<h1>browser-perf</h1>
+	<ol>
+		<li class = "step">
+			<span class = "speaker-notes">Run Selenium</span> <em>Actions</em>
+		</li>
+		<li class = "step">
+			<span class = "speaker-notes">Read Data from</span> <em>Probes</em>
+		</li>
+		<li class = "step">
+			<span class = "speaker-notes">Process to get</span>
+			<em>Metrics</em>
+		</li>
+	</ol>
+	<div class = "row">
+		<div class = "step col-lg-4">
+			Selenium scripts, user scenarios
+			<br/>
+			Scroll a product page, checkouts
+			<br/>
+			Saucelabs, Selenium grid, Android
+		</div>
+		<div class = "step col-lg-4">
+			Data collected from sources like
+			<br/>
+			Chrome Dev timelines, about:tracing
+			<br/>
+			IE UI Responsiveness, XPerf, WPA
+		</div>
+		<div class = "step col-lg-4">
+			Metrics like
+			<br/>
+			Layouts, Paints and Compositions
+			<br/>
+			mean frame time, load times, etc
+		</div>
+	</div>
+</div></li>
+		<li>
+			<div class = "demo container">
+	<h1>Demo time</h1>
+	<img class = "step slide-only tardis" src = "img/tardis.png"/>
+	<ul class = "list-unstyled well">
+		<li><h3>Revert to basic version</h3></li>
+		<li>&lambda; <code>git checkout perf</code></li>
+		<li>&lambda; <code>git format-patch HEAD~4</code></li>
+		<li>&lambda; <code>git reset HEAD~4 --hard</code></li>
+		<li><h3>Apply code commits and run tests</h3></li>
+		<li>&lambda; <code>git apply 0001- ... and so on</code></li>
+		<li>&lambda; <code>grunt perf</code></li>
+		<li>Can also test on Android Chrome</li>
+		<li>Convert this to a Cordova app and test </li>
+		<li>&lambda; <code>browser-perf --config-file=cordova.config.json</code></li>
+	</ul>
+</div></li>
+		<li>
+			<div class = "perfjankie container">
+	<h2 class = "step1">Caveats</h2>
+	<ul class = "step1 caveats">
+		<li>Microbenchmarks are dangerous</li>
+		<li>Selenium driver eats up some time</li>
+		<li>Data over time is better than absolute points</li>
+		<li>Not all data is useful</li>
+	</ul>
+	<hr/>
+	<div class = "row">
+		<div class = "col-lg-6">
+			<h1>perfjankie</h1>
+			<h3>CouchApp that saves the data, displays the graphs</h3>
+			<p class = "speaker-notes">
+				Saves data from browser-perf in a CouchDB like database. Also responsible for serving HTML, CSS and JS for displaying the graphs - everything at one place !!
+			</p>
+		</div>
+		<div class = "col-lg-6">
+			<h1>Phantomas</h1>
+			<h3>Runs tests on PhantomJS</h3>
+			<p class = "speaker-notes">A tool that runs on PhantomJS and collects more metrics !!</p>
+		</div>
+	</div>
+
+</div></li>
+		<li>
+			<div class = "takeaways container">
+	<h1>Takeaways</h1>
+	<ul>
+		<li class = "step">Profiling performance is good</li>
+		<li class = "step">Profiling performance continuously is better</li>
+		<li class = "step">Performance over time can help catch regression</li>
+		<li class = "step">Adding perf profiling to continuous integration is not hard</li>
+	</ul>
+</div></li>
+		<li>
+			<div class = "thankyou container">
+	<div class = "row">
+		<div class = "col-lg-7">
+			<img src = "img/qr.png" class = "slide-only"/>
+			<h1>https://axemclion.github.com/perfslides</h1>
+		</div>
+		<div class = "col-lg-5">
+			<h1>Parashuram</h1>
+			<ul class = "list-unstyled">
+				<li>
+					<span class = "glyphicon glyphicon-link"></span>
+					<a href = "nparashuram.com">http://nparashuram.com</a>
+				</li>
+				<li>
+					<img class = "contact" src = "img/twitter.png"/>
+					<a href = "http://twitter.com/nparashuram">@nparashuram</a>
+				</li>
+				<li>
+					<img class = "contact" src = "img/github.png"/>
+					<a href = "http://github.com/axemclion">axemclion</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div></li>
+	</ul>
+	<div class="btn-group main-menu hidden-xs">
+		<button type="button" class="prev-slide slide-only btn btn-default">
+			<span class = "glyphicon glyphicon-chevron-left"></span>
+		</button>
+		<button type="button" class="presentation-mode site-only btn btn-default" data-toggle="dropdown">
+			<span class = "glyphicon glyphicon glyphicon-fullscreen"></span>
+		</button>
+		<button type="button" class="presentation-mode slide-only btn btn-default">
+			<span class = "glyphicon glyphicon glyphicon-remove-circle"></span>
+		</button>
+		<button type="button" class="next-slide slide-only btn btn-default">
+			<span class = "glyphicon glyphicon-chevron-right"></span>
+		</button>
+	</div>
+	<script type = "text/javascript" src = "jquery/dist/jquery.js"></script>
+	<script type = "text/javascript" src = "bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type = "text/javascript" src = "js/main.js"></script>
+</body>
+</html>

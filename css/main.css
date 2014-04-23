@@ -1,0 +1,615 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url(../fonts/Lato-Black.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lustria';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), url(../fonts/Lustria.woff) format('woff');
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+.main-menu {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  opacity: 0.5;
+  -webkit-transform: translateZ(0px);
+}
+.slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.carousel-control {
+  background: transparent;
+  background-image: none !important;
+}
+.carousel-control span {
+  background: #ccc;
+  border-radius: 5px;
+}
+body.presentation {
+  overflow: hidden;
+}
+.presentation .site-only,
+.presentation .speaker-notes {
+  display: none !important;
+}
+.presentation .step {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.presentation .container {
+  width: auto;
+}
+.presentation .slides {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.presentation .slides > li {
+  width: 100%;
+  height: 100%;
+  border-bottom: SOLID 1px #ccc;
+}
+.presentation .slides > li > div {
+  height: 100%;
+}
+.presentation .slides h1 {
+  font-size: 50px;
+}
+.presentation .slides .title {
+  font-family: Lustria;
+  background: #3498db;
+  color: white;
+}
+.presentation .slides .title .col-lg-6 {
+  width: 100%;
+}
+.presentation .slides .title h1 {
+  margin-top: 15% !important;
+  font-size: 80px;
+  font-weight: bold;
+}
+.presentation .slides .title h3 {
+  font-size: 30px;
+}
+.presentation .slides .title .author {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15%;
+}
+.presentation .slides .why-performance h1 {
+  margin-top: 15% !important;
+}
+.presentation .slides .why-performance span {
+  font-size: 300px;
+  margin-top: 100px;
+}
+.presentation .slides .what-regression {
+  background: white;
+}
+.presentation .slides .what-regression h1 {
+  margin-top: 50px;
+}
+.presentation .slides .what-regression .trollface {
+  margin: auto;
+  width: 50% !important;
+  height: 50% !important;
+  background-size: contain !important;
+  box-shadow: none;
+  border: none;
+}
+.presentation .slides .what-regression .row > div.col-lg-4 {
+  padding: 0;
+  margin-top: -20px;
+  position: absolute;
+  background: white;
+  width: 60%;
+  left: 20%;
+  height: 80%;
+  box-shadow: 0 0 20px 3px #000;
+  color: #000;
+}
+.presentation .slides .what-regression .row > div.col-lg-4 h4 {
+  font-size: 60px;
+  position: absolute;
+  width: 98%;
+}
+.presentation .slides .what-regression .row > div.col-lg-4 p {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+  font-weight: 700;
+  font-size: 30px;
+}
+.presentation .slides .what-regression .row > div.col-lg-4 p:before {
+  background: #efefef;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.presentation .slides .what-regression .row > div.col-lg-4 h4,
+.presentation .slides .what-regression .row > div.col-lg-4 p {
+  width: 100%;
+  opacity: 0.6;
+  margin: 0;
+  color: #000;
+  background-color: white;
+}
+.presentation .slides .what-regression .row > div.col-lg-4 img.slide-only {
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.presentation .slides .what-regression .row > div.col-lg-4:first-child {
+  -webkit-transform: rotate(7deg);
+  transform: rotate(7deg);
+}
+.presentation .slides .what-regression .row > div.col-lg-4:last-child {
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(7deg);
+}
+.presentation .slides .fixing-regressions ul.nav.nav-tabs {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 60px auto 60px auto;
+  width: 80%;
+  border-bottom: none;
+  text-align: center;
+}
+.presentation .slides .fixing-regressions ul.nav.nav-tabs > li {
+  float: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a {
+  background: #ECECEC;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: block;
+  font-family: arial;
+  font-weight: bold;
+  color: #7f7f7f;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #fff;
+  border: 1px solid #a7a7a7;
+  margin: 0px auto;
+  box-shadow: 0px 2px 1px #ffffff inset, 0px -2px 8px #ffffff, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+}
+.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a i {
+  float: right;
+  margin-top: 2px;
+}
+.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a:hover {
+  box-shadow: 0px 2px 1px #ffffff inset, 0px -2px 20px #ffffff, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+}
+.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a:active {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px #ffffff, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background: -webkit-linear-gradient(top, #d1d1d1 0%, #ececec 100%);
+}
+.presentation .slides .fixing-regressions .tab-content {
+  width: 80%;
+  margin: auto;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+}
+.presentation .slides .fixing-regressions .tab-content h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.presentation .slides .fixing-regressions .tab-content #wisdom {
+  text-align: center;
+}
+.presentation .slides .after-measure {
+  background-color: #3498db;
+  color: white;
+}
+.presentation .slides .after-measure h1 {
+  margin-top: 40px;
+  font-size: 60px;
+}
+.presentation .slides .after-measure ul.list-group {
+  text-align: left;
+  width: 70%;
+  margin: 40px auto 0 auto;
+}
+.presentation .slides .after-measure ul.list-group > .list-group-item {
+  border: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  background: none;
+  font-weight: 400;
+  font-size: 35px;
+}
+.presentation .slides .after-measure ul.list-group > .list-group-item .number {
+  margin: 10px;
+}
+.presentation .slides .after-measure ul.list-group > .list-group-item .number:after {
+  content: ".";
+}
+.presentation .slides .graphs .carousel {
+  height: 100%;
+}
+.presentation .slides .graphs .carousel .carousel-inner {
+  height: 100%;
+}
+.presentation .slides .graphs .carousel .carousel-inner > .item {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.presentation .slides .browser-perf ol {
+  width: 70%;
+  font-size: 40px;
+  text-align: left;
+  margin: 20px auto 80px auto;
+  list-style: none;
+  text-align: center;
+}
+.presentation .slides .browser-perf ol li {
+  display: inline-block;
+  color: white;
+}
+.presentation .slides .browser-perf ol li:after {
+  width: 0;
+  height: 0;
+  border-top: 44px solid transparent;
+  border-bottom: 44px solid transparent;
+  border-left: 30px solid #5cb85c;
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 30px;
+}
+.presentation .slides .browser-perf ol li:first-child:after {
+  border-left: 30px solid #f0ad4e;
+}
+.presentation .slides .browser-perf ol li:first-child em {
+  background-color: #f0ad4e;
+}
+.presentation .slides .browser-perf ol li:last-child:after {
+  border-left: 30px solid #d9534f !important;
+}
+.presentation .slides .browser-perf ol li:last-child em {
+  background-color: #d9534f;
+}
+.presentation .slides .browser-perf ol li em {
+  background-color: #5cb85c;
+  padding: 20px;
+  margin: 0;
+  font-weight: bold;
+  font-style: normal;
+  height: 20px;
+}
+.presentation .slides .browser-perf .row {
+  font-weight: 400;
+  font-size: 30px;
+  width: 70%;
+  margin: auto;
+}
+.presentation .slides .browser-perf .row > div {
+  height: 100%;
+}
+.presentation .slides .browser-perf .row > div:first-child {
+  border-right: 3px SOLID #ccc;
+}
+.presentation .slides .browser-perf .row > div:last-child {
+  border-left: 3px SOLID #ccc;
+}
+.presentation .slides .perfjankie ul {
+  width: 60%;
+  margin: auto;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: left;
+}
+.presentation .slides .perfjankie h1 {
+  margin-top: 40px;
+}
+.presentation .slides .demo ul {
+  width: 60%;
+  margin: auto;
+  text-align: left;
+}
+.presentation .slides .demo .tardis {
+  position: absolute;
+  right: 1%;
+  width: 200px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 20;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: 20;
+  -moz-animation-name: blink;
+  -moz-animation-timing-function: ease-in-out;
+}
+.presentation .slides .takeaways {
+  font-family: Lustria;
+  background-color: white;
+}
+.presentation .slides .takeaways h1 {
+  margin: 70px 0 70px 0;
+}
+.presentation .slides .takeaways ul {
+  width: 60%;
+  margin: auto;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: left;
+}
+.presentation .slides .thankyou {
+  background-color: white;
+}
+.presentation .slides .thankyou .row {
+  margin: 70px 0 0 0;
+}
+.presentation .slides .thankyou .row div:first-child {
+  border-right: 4px #ccc solid;
+}
+.presentation .slides .thankyou .row div:first-child h2 {
+  font-size: 40px;
+}
+.presentation .slides .thankyou .row div h1 {
+  margin: 70px 0 70px 0;
+  font-size: 50px;
+  font-family: Lustria;
+}
+.presentation .slides .thankyou .row div ul {
+  text-align: center;
+  width: 60%;
+  margin: 10px auto 30px auto;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: left;
+}
+.presentation .slides .thankyou .row div ul li {
+  text-align: center;
+}
+.presentation .slides .thankyou .row div ul li img {
+  width: 25px;
+  height: 25px;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.site .slide-only {
+  display: none !important;
+}
+.site .step {
+  opacity: 1 !important;
+}
+.site .slides > li {
+  margin-bottom: 40px;
+}
+.site .slides .title {
+  background-color: #3498db;
+  margin-top: -20px;
+  padding-top: 200px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+.site .slides .title h1 {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.site .slides .title h3 {
+  font-weight: 300;
+}
+.site .slides .why-performance,
+.site .slides .what-regression {
+  text-align: center;
+}
+.site .slides .why-performance h1,
+.site .slides .what-regression h1 {
+  font-weight: 300;
+}
+.site .slides .what-regression h1 {
+  margin-bottom: 30px;
+}
+.site .slides .what-regression .row .col-lg-4 {
+  background-image: none !important;
+}
+.site .slides .what-regression img {
+  height: 200px;
+  padding: 10px;
+}
+.site .slides .fixing-regressions {
+  background: white;
+  box-shadow: 0 0 20px #000;
+  padding: 3em;
+}
+.site .slides .fixing-regressions .tool {
+  height: 200px;
+}
+.site .slides .fixing-regressions .tool.chrometool {
+  -webkit-transform: translateY(20px) rotate(-10deg);
+  transform: translateY(20px) rotate(-10deg);
+}
+.site .slides .fixing-regressions #wisdom {
+  text-align: center;
+}
+.site .slides .fixing-regressions #wisdom img {
+  height: 200px;
+  margin: 2em;
+}
+.site .slides .after-measure .list-group-item {
+  border: 2px #ccc solid;
+  margin: 5px 0;
+}
+.site .slides .after-measure .number {
+  padding: 0.5em 1em;
+  margin: 10px 10px -10px 10px;
+  background-color: #3498db;
+  border-radius: 10px;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  left: -40px;
+  font-size: 0.8em;
+}
+.site .slides .graphs {
+  text-align: center;
+}
+.site .slides .graphs img {
+  border: SOLID 3px #ccc;
+}
+.site .slides .perfjankie .row .col-lg-6 {
+  text-align: center;
+}
+.site .slides .perfjankie .row .col-lg-6:first-child {
+  border-right: 3px #ccc solid;
+}
+.site .slides .browser-perf {
+  padding: 10px;
+}
+.site .slides .browser-perf .row {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.site .slides .browser-perf ol {
+  font-size: 20px;
+  text-align: left;
+  margin: 40px auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+.site .slides .browser-perf ol li {
+  display: inline-block;
+  color: white;
+  margin: 10px;
+}
+.site .slides .browser-perf ol li:after {
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 10px solid #5cb85c;
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 14px;
+}
+.site .slides .browser-perf ol li:first-child:after {
+  border-left: 10px solid #f0ad4e;
+}
+.site .slides .browser-perf ol li:first-child em,
+.site .slides .browser-perf ol li:first-child span {
+  background-color: #f0ad4e;
+}
+.site .slides .browser-perf ol li:last-child:after {
+  border-left: 10px solid #d9534f !important;
+}
+.site .slides .browser-perf ol li:last-child em,
+.site .slides .browser-perf ol li:last-child span {
+  background-color: #d9534f;
+}
+.site .slides .browser-perf ol li span,
+.site .slides .browser-perf ol li em {
+  background-color: #5cb85c;
+  padding: 10px;
+  margin: 0;
+}
+.site .slides .browser-perf ol li em {
+  margin: 0 -4px 0 -10px;
+}
+.site .slides .thankyou {
+  font-family: Lustria;
+}
+.site .slides .thankyou .row div {
+  width: 100%;
+}
+.site .slides .thankyou .row div h1 {
+  font-size: 50px;
+}
+.site .slides .thankyou .row div li {
+  font-size: 20px;
+}
+.site .slides .thankyou .contact {
+  width: 20px;
+  height: 20px;
+}
