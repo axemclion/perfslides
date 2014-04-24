@@ -1,22 +1,23 @@
 $(document).ready(function() {
-	$('<div>', {
+	var scrollCount = $('<div>', {
 		class: 'scrollCount'
 	}).html('Ready').appendTo('body');
 
+	var documentHeight = $(document).height(),
+		scrollCountHeight = scrollCount.height();
+
 	$(document).on('scroll', function(e) {
-		scrolledPercent = parseInt($('body').scrollTop() / ($(document).height() - $('body').height()) * 100);
+		var body = $('body'),
+			bodyHeight = body.height();
+
+		scrolledPercent = parseInt(body.scrollTop() / (documentHeight - bodyHeight) * 100);
 		$('.scrollCount').html(scrolledPercent + ' %');
-		if ($('.scrollCount').position().top + $('.scrollCount').height() + 50 >= $('body').height()) {
-			scrolledPercent = parseInt(($('body').height() - 50 - $('.scrollCount').height())) + 'px';
-		} else {
-			scrolledPercent = scrolledPercent + '%';
-		}
 
-		$('.scrollCount').animate({
-			'top': scrolledPercent
-		}, 1);
+		$('.scrollCount').css('-webkit-transform', 'translate3d(0,' + (scrolledPercent / 100 * bodyHeight) + 'px,0)');
 
-		document.cookie = 'scroll=' + scrolledPercent;
+		window.requestAnimationFrame(function() {
+			document.cookie = 'scroll=' + scrolledPercent;
+		});
 	});
 
 	var scrolledPercent = document.cookie.match(/scroll=\S*/g);
