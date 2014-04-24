@@ -1,16 +1,42 @@
 <div class = "demo container">
 	<h1>Demo time</h1>
+	<p class = "speaker-noted">
+		To try out the demo, get the source code at <%= repository.url %> and follow the steps. 
+		<br/>Check out the README.md file in the project for more information about setting up the dev environment.
+	</p>
 	<img class = "step slide-only tardis" src = "img/tardis.png"/>
 	<ul class = "list-unstyled well">
-		<li><h3>Revert to basic version</h3></li>
-		<li>&lambda; <code>git checkout perf</code></li>
-		<li>&lambda; <code>git format-patch HEAD~4</code></li>
-		<li>&lambda; <code>git reset HEAD~4 --hard</code></li>
-		<li><h3>Apply code commits and run tests</h3></li>
-		<li>&lambda; <code>git apply 0001- ... and so on</code></li>
-		<li>&lambda; <code>grunt perf</code></li>
+		<li>
+			<h3>Revert to basic version</h3>
+		</li>
+		<li>
+			&lambda;
+			<code>git checkout perf</code>
+		</li>
+		<li>
+			&lambda;
+			<code>git format-patch HEAD~4</code>
+		</li>
+		<li>
+			&lambda;
+			<code>git reset HEAD~4 --hard</code>
+		</li>
+		<li>
+			<h3>Apply code commits and run tests</h3>
+		</li>
+		<li>
+			&lambda;
+			<code>git apply 0001- ... and so on</code>
+		</li>
+		<li>
+			&lambda;
+			<code>grunt perf</code>
+		</li>
 		<li>Can also test on Android Chrome</li>
-		<li>Convert this to a Cordova app and test </li>
-		<li>&lambda; <code>browser-perf --config-file=cordova.config.json</code></li>
+		<li>Convert this to a Cordova app and test</li>
+		<li>
+			&lambda;
+			<code>browser-perf --config-file=cordova.config.json</code>
+		</li>
 	</ul>
 </div>

@@ -1,10 +1,25 @@
 <div class = "thankyou container">
 	<div class = "row">
 		<div class = "col-lg-7">
+			<h3 class = "site-only">Links</h3>
+			<p class = "site-only">These slides are at</p>
 			<img src = "img/qr.png" class = "slide-only"/>
-			<h1><%= homepage %></h1>
+			<h1 class = "homepage">
+				<a href = "<% homepage %>
+					">
+					<%= homepage %></a>
+			</h1>
+			<p class = "site-only">The source code this page lives at</p>
+			<h1 class = "site-only">
+				<a href = "<%= repository.url %>
+					">
+					<%= repository.url %></a>
+			</h1>
 		</div>
 		<div class = "col-lg-5">
+			<h3 class= "site-only">
+				Author information
+			</h3>
 			<h1>Parashuram</h1>
 			<ul class = "list-unstyled">
 				<li>
