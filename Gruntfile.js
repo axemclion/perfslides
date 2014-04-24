@@ -37,6 +37,12 @@ module.exports = function(grunt) {
 				cwd: './www',
 				src: ['js/**/*.js', 'fonts/*.*', 'img/*.*'],
 				dest: './bin'
+			},
+			bower: {
+				expand: true,
+				cwd: './bower_components',
+				src: ['**/*.*'],
+				dest: './bin'
 			}
 		},
 		watch: {
@@ -91,5 +97,5 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', ['copy', 'less', 'ejs']);
 	grunt.registerTask('default', ['clean', 'build', 'connect', 'watch']);
-	grunt.registerTask('perf', ['clean', 'build', 'connect', 'gitData', 'perfjankie'])
+	grunt.registerTask('perf', ['clean', 'build', 'connect', 'gitData', 'perfjankie:local'])
 };
