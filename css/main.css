@@ -401,7 +401,7 @@ body.presentation {
 .presentation .slides .thankyou .row div:first-child {
   border-right: 4px #ccc solid;
 }
-.presentation .slides .thankyou .row div:first-child h2 {
+.presentation .slides .thankyou .row div:first-child h1 {
   font-size: 40px;
 }
 .presentation .slides .thankyou .row div h1 {
@@ -537,6 +537,9 @@ body.presentation {
 .site .slides .graphs img {
   border: SOLID 3px #ccc;
 }
+.site .slides .perfjankie .other-tools {
+  text-align: center;
+}
 .site .slides .perfjankie .row .col-lg-6 {
   text-align: center;
 }
@@ -600,14 +603,17 @@ body.presentation {
 .site .slides .thankyou {
   font-family: Lustria;
 }
+.site .slides .thankyou h3 {
+  font-size: 40px;
+}
 .site .slides .thankyou .row div {
   width: 100%;
 }
 .site .slides .thankyou .row div h1 {
-  font-size: 50px;
+  font-size: 24px;
 }
 .site .slides .thankyou .row div li {
-  font-size: 20px;
+  font-size: 18px;
 }
 .site .slides .thankyou .contact {
   width: 20px;

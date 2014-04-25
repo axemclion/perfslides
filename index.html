@@ -23,7 +23,7 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<h1>Automating Front End Performance</h1>
-				<h3>and making it a part of continuous integration</h3>
+				<h3>and making it a part of continuouz integration</h3>
 			</div>
 			<div class="col-lg-6">
 				<img class="img-responsive site-only" src="img/ipad-hand.png" alt="">
@@ -103,7 +103,7 @@
 			</li>
 		</ul>
 
-		<div class="tab-content">
+		<div class="tab-content site-only">
 			<div class="tab-pane active" id="rules">
 				<h2>Rules</h2>
 				<ul>
@@ -159,7 +159,7 @@
 			<div class = "after-measure container">
 	<h1>Measurements done, now what ?</h1>
 	<p class = "speaker-notes">
-		Fixing regressions usually is by measuring the performance problems.
+		Fixing regressions usually starts with measuring performance problems. A lot of interesting data is generated when performance metrics are measured. This data can be archived and put to good use!
 	</p>
 	<ul class = "list-group">
 		<li class="step list-group-item">
@@ -190,6 +190,9 @@
 		<li>
 			<div class = "container graphs">
 	<h1 class = "site-only">Performance Graphs</h1>
+  <p class = "speaker-notes">
+    Examples of some of the graphs that were generated using the automated tools are
+  </p>
 	<div id = "graphs-carousel" class="carousel" data-ride="carousel">
       <ol class="carousel-indicators site-only">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -214,7 +217,7 @@
 		<li>
 			<div class = "browser-perf container">
 	<p class = "speaker-notes">
-		This presentation is about browser rendering performance, and using variaous techniques to automate the collection of browser rendering performance metrics
+		This presentation is about browser rendering performance, and using variaous techniques to automate the collection of browser rendering performance metrics. <a href = "http://npmjs.org/package/browser-perf">browser-perf</a> is a tool that can help you measure browser rendering performance. 
 	</p>
 	<h1>browser-perf</h1>
 	<ol>
@@ -256,23 +259,50 @@
 		<li>
 			<div class = "demo container">
 	<h1>Demo time</h1>
+	<p class = "speaker-noted">
+		To try out the demo, get the source code at git://github.com/axemclion/perfslides.git and follow the steps. 
+		<br/>Check out the README.md file in the project for more information about setting up the dev environment.
+	</p>
 	<img class = "step slide-only tardis" src = "img/tardis.png"/>
 	<ul class = "list-unstyled well">
-		<li><h3>Revert to basic version</h3></li>
-		<li>&lambda; <code>git checkout perf</code></li>
-		<li>&lambda; <code>git format-patch HEAD~4</code></li>
-		<li>&lambda; <code>git reset HEAD~4 --hard</code></li>
-		<li><h3>Apply code commits and run tests</h3></li>
-		<li>&lambda; <code>git apply 0001- ... and so on</code></li>
-		<li>&lambda; <code>grunt perf</code></li>
+		<li>
+			<h3>Revert to basic version</h3>
+		</li>
+		<li>
+			&lambda;
+			<code>git checkout perf</code>
+		</li>
+		<li>
+			&lambda;
+			<code>git format-patch HEAD~4</code>
+		</li>
+		<li>
+			&lambda;
+			<code>git reset HEAD~4 --hard</code>
+		</li>
+		<li>
+			<h3>Apply code commits and run tests</h3>
+		</li>
+		<li>
+			&lambda;
+			<code>git apply 0001- ... and so on</code>
+		</li>
+		<li>
+			&lambda;
+			<code>grunt perf</code>
+		</li>
 		<li>Can also test on Android Chrome</li>
-		<li>Convert this to a Cordova app and test </li>
-		<li>&lambda; <code>browser-perf --config-file=cordova.config.json</code></li>
+		<li>Convert this to a Cordova app and test</li>
+		<li>
+			&lambda;
+			<code>browser-perf --config-file=cordova.config.json</code>
+		</li>
 	</ul>
 </div></li>
 		<li>
 			<div class = "perfjankie container">
 	<h2 class = "step1">Caveats</h2>
+	<p class = "speaker-notes">Some of the things to watch out are</p>
 	<ul class = "step1 caveats">
 		<li>Microbenchmarks are dangerous</li>
 		<li>Selenium driver eats up some time</li>
@@ -280,16 +310,21 @@
 		<li>Not all data is useful</li>
 	</ul>
 	<hr/>
+	<h1 class = "other-tools">Other tools</h1>
 	<div class = "row">
 		<div class = "col-lg-6">
-			<h1>perfjankie</h1>
+			<h1>
+				<a href ="http://github.com/axemclion/perfjankie">perfjankie</a>
+			</h1>
 			<h3>CouchApp that saves the data, displays the graphs</h3>
 			<p class = "speaker-notes">
 				Saves data from browser-perf in a CouchDB like database. Also responsible for serving HTML, CSS and JS for displaying the graphs - everything at one place !!
 			</p>
 		</div>
 		<div class = "col-lg-6">
-			<h1>Phantomas</h1>
+			<h1>
+				<a href = "https://github.com/macbre/phantomas">Phantomas</a>
+			</h1>
 			<h3>Runs tests on PhantomJS</h3>
 			<p class = "speaker-notes">A tool that runs on PhantomJS and collects more metrics !!</p>
 		</div>
@@ -305,15 +340,73 @@
 		<li class = "step">Performance over time can help catch regression</li>
 		<li class = "step">Adding perf profiling to continuous integration is not hard</li>
 	</ul>
+	<hr/>
+	<div class = "site-only">
+		<h1>Try it out now!</h1>
+		<h3>Try out performance metrics for your website</h3>
+		<p>
+			You would need a
+			<a href = "https://github.com/axemclion/browser-perf/wiki/Setup-Instructions#selenium-setup">local</a>
+			Selenium setup. Install browser-perf globally using
+			<code>npm install -g browser-perf</code>
+			and then use the
+			<a href = "https://github.com/axemclion/browser-perf/wiki/Command-Line-Usage#command-line">instructions</a>
+			to run it on the command line.
+		</p>
+		<h3>Add performance measurement to your Grunt file</h3>
+		<ul>
+			<li>
+				Install
+				<a href = "http://npmjs.org/package/perfjankie">perfjankie</a>
+				from npm
+			</li>
+			<li>
+				Install
+				<a href = "http://couchdb.apache.org/">Apache CouchDB</a>
+			</li>
+			<li>
+				Set up Selenium
+				<a href = "https://github.com/axemclion/browser-perf/wiki/Setup-Instructions#selenium-setup">locally</a>
+				, or connect to a service
+			</li>
+			<li>
+				Look at this project's
+				<a href = "https://github.com/axemclion/perfslides/blob/master/Gruntfile.js">grunt file</a>
+				, and include the perfjankie task.
+			</li>
+		</ul>
+		<h3>As a service - perfmonkey.com</h3>
+		<p>
+			<a href = "http://perfmonkey.com">Perfmonkey.com</a>
+			is a service that does all the above. Just CURL a URL everytime your deploy and perfmonkey.com will run the performance tests and give you the results on a dashboard.
+			<br/><br/>
+			<a class = "btn btn-success btn-large" href = "http://perfmonkey.com">Try perfmonkey.com now &raquo;</a>
+		</p>
+	</div>
 </div></li>
 		<li>
 			<div class = "thankyou container">
 	<div class = "row">
 		<div class = "col-lg-7">
+			<h3 class = "site-only">Links</h3>
+			<p class = "site-only">These slides are at</p>
 			<img src = "img/qr.png" class = "slide-only"/>
-			<h1>https://axemclion.github.com/perfslides</h1>
+			<h1 class = "homepage">
+				<a href = "
+					">
+					https://axemclion.github.com/perfslides</a>
+			</h1>
+			<p class = "site-only">The source code this page lives at</p>
+			<h1 class = "site-only">
+				<a href = "git://github.com/axemclion/perfslides.git
+					">
+					git://github.com/axemclion/perfslides.git</a>
+			</h1>
 		</div>
 		<div class = "col-lg-5">
+			<h3 class= "site-only">
+				Author information
+			</h3>
 			<h1>Parashuram</h1>
 			<ul class = "list-unstyled">
 				<li>
@@ -350,5 +443,15 @@
 	<script type = "text/javascript" src = "jquery/dist/jquery.js"></script>
 	<script type = "text/javascript" src = "bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type = "text/javascript" src = "js/main.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-617499-9', 'github.com');
+	  ga('send', 'pageview');
+	</script>
 </body>
 </html>
