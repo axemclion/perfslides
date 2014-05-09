@@ -62,8 +62,8 @@ module.exports = function(grunt) {
 			options: {
 				suite: 'perfSlides - Performance Analysis',
 				urls: ['http://localhost:8080'],
-				time: commit.seq,
-				run: commit.tag
+				time: commit.seq[0],
+				run: commit.tag[0]
 			},
 			local: {
 				options: {
