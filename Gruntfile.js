@@ -1,8 +1,4 @@
 module.exports = function(grunt) {
-	var commit = {
-		tag: [],
-		seq: []
-	};
 	grunt.initConfig({
 		clean: ['./bin'],
 		connect: {
@@ -61,9 +57,7 @@ module.exports = function(grunt) {
 		perfjankie: {
 			options: {
 				suite: 'perfSlides - Performance Analysis',
-				urls: ['http://localhost:8080'],
-				time: commit.seq[0],
-				run: commit.tag[0]
+				urls: ['http://localhost:8080']
 			},
 			local: {
 				options: {
@@ -79,8 +73,9 @@ module.exports = function(grunt) {
 		}
 	});
 
-	require('load-grunt-tasks')(grunt);
 	grunt.loadNpmTasks('perfjankie');
+
+	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('gitData', function() {
 		var done = this.async();
@@ -88,12 +83,13 @@ module.exports = function(grunt) {
 		exec('git log --format=%B -n 1', function(err, stdout, stderr) {
 			var tag = stdout.match(/<deploy:[\S]*>/ig)[0].replace(/<deploy:|>/g, '');
 			var seq = stdout.match(/<seq:[\S]*>/ig)[0].replace(/<seq:|>/g, '');
-			console.log(tag);
-			commit.tag.push(tag.substring(0, 10));
-			commit.seq.push(seq);
+			var perfjankie = grunt.config.get('perfjankie');
+			perfjankie.local.options.run = tag.substring(0, 10);
+			perfjankie.local.options.time = seq;
+			grunt.config.set('perfjankie', perfjankie);
 			done();
 		});
-	})
+	});
 
 	grunt.registerTask('build', ['copy', 'less', 'ejs']);
 	grunt.registerTask('default', ['clean', 'build', 'connect', 'watch']);
