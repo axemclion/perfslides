@@ -1,0 +1,44 @@
+<div class = "rendering-perf container">
+	<p class = "speaker-notes">
+		This presentation is about browser rendering performance, and using variaous techniques to automate the collection of browser rendering performance metrics.
+		<a href = "http://npmjs.org/package/browser-perf">browser-perf</a>
+		is a tool that can help you measure browser rendering performance.
+	</p>
+	<h3>Measure rendering performance</h3>
+	<div class = "step browsers">
+		<ul class = "list-inline">
+			<li>
+				<div class = "img chrome"/>
+			</li>
+			<li>
+				<div class = "img firefox"/>
+			</li>
+			<li>
+				<div class = "img ie" />
+			</li>
+		</ul>
+	</div>
+	<div class = "step browser-perf-tool">
+		<h1>browser-perf</h1>
+		<ol>
+			<li class = "step">
+				<span class = "speaker-notes">Run Selenium</span> <em>Actions</em>
+			</li>
+			<li class = "step">
+				<span class = "speaker-notes">Read Data from</span> <em>Probes</em>
+			</li>
+			<li class = "step">
+				<span class = "speaker-notes">Process to get</span>
+				<em>Metrics</em>
+			</li>
+		</ol>
+	</div>
+	<div class = "step perfjankie">
+		<h1>Perfjankie</h1>
+		<p>Grunt task, run browser-perf, save data to couchdb</p>
+	</div>
+	<div class = "step couchdb">
+		<h2>CouchDB</h2>
+		<p>Data store and web page for graphs</p>
+	</div>
+</div>

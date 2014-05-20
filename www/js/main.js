@@ -1,8 +1,25 @@
+var isPresentationRunning = false;
 $(document).ready(function() {
 	$(document)
 		.on('click', '.presentation-mode', presentationMode)
 		.on('click', '.prev-slide', prevSlide)
-		.on('click', '.next-slide', nextStep);
+		.on('click', '.next-slide', nextStep)
+		.on('keydown', function(e) {
+			if (isPresentationRunning){
+				switch(e.keyCode){
+					case 37:
+						prevSlide();
+						break;
+					case 39:
+					case 32:
+					case 13:
+						nextStep();
+						break; 
+					case 27:
+						presentationMode();
+				}
+			}
+		});
 
 	var start = window.location.hash.substring(1);
 	if (start === 'presentation') {
@@ -12,6 +29,7 @@ $(document).ready(function() {
 });
 
 function presentationMode() {
+	isPresentationRunning = !isPresentationRunning;
 	$('body').toggleClass('site').toggleClass('presentation');
 }
 
