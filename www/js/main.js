@@ -22,11 +22,22 @@ $(document).ready(function() {
 		});
 
 	var start = window.location.hash.substring(1);
-	if (start === 'presentation') {
+	if (start.indexOf('presentation') !== -1) {
 		presentationMode();
+		var slide = parseInt(start.replace(/presentation&/, ''));
+		if (typeof slide !== 'number' || isNaN(slide)) {
+			slide = 0;
+		}
+		gotoSlide(slide - 1);
 	}
 
 });
+
+function gotoSlide(slideNum) {
+	currentStep = 0, currentSlide = 0;
+	$('body').scrollTop(0);
+	changeSlide(slideNum + 1);
+}
 
 function presentationMode() {
 	isPresentationRunning = !isPresentationRunning;
@@ -36,7 +47,6 @@ function presentationMode() {
 			slide = 0;
 		var slides = $('.slides>li');
 		for (var i = 0; i < slides.length; i++) {
-			console.log(i, $(slides[i]).offset().top, bodyTop)
 			if ($(slides[i]).offset().top < bodyTop) {
 				slide = i;
 			} else {
@@ -47,10 +57,7 @@ function presentationMode() {
 
 	$('body').toggleClass('site').toggleClass('presentation');
 	if (isPresentationRunning) {
-		currentStep = 0, currentSlide = 0;
-		$('body').scrollTop(0);
-		changeSlide(slide + 1);
-		console.log(slide);
+		gotoSlide(slide - 1);
 	}
 }
 
@@ -75,6 +82,7 @@ function prevSlide() {
 
 function changeSlide(nextSlide) {
 	$('.slides>li').eq(currentSlide).find('.step').css('opacity', 0);
+
 	currentSlide += nextSlide;
 	if (currentSlide < 0) {
 		currentSlide = 0;
@@ -85,4 +93,5 @@ function changeSlide(nextSlide) {
 	}
 	currentStep = 0;
 	$('.slides').css('top', (-currentSlide * 100) + '%');
+	document.location.href = '#presentation&' + currentSlide;
 }
