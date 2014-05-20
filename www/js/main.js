@@ -5,8 +5,8 @@ $(document).ready(function() {
 		.on('click', '.prev-slide', prevSlide)
 		.on('click', '.next-slide', nextStep)
 		.on('keydown', function(e) {
-			if (isPresentationRunning){
-				switch(e.keyCode){
+			if (isPresentationRunning) {
+				switch (e.keyCode) {
 					case 37:
 						prevSlide();
 						break;
@@ -14,7 +14,7 @@ $(document).ready(function() {
 					case 32:
 					case 13:
 						nextStep();
-						break; 
+						break;
 					case 27:
 						presentationMode();
 				}
@@ -30,7 +30,28 @@ $(document).ready(function() {
 
 function presentationMode() {
 	isPresentationRunning = !isPresentationRunning;
+
+	if (isPresentationRunning) {
+		var bodyTop = $('body').scrollTop(),
+			slide = 0;
+		var slides = $('.slides>li');
+		for (var i = 0; i < slides.length; i++) {
+			console.log(i, $(slides[i]).offset().top, bodyTop)
+			if ($(slides[i]).offset().top < bodyTop) {
+				slide = i;
+			} else {
+				break;
+			}
+		}
+	}
+
 	$('body').toggleClass('site').toggleClass('presentation');
+	if (isPresentationRunning) {
+		currentStep = 0, currentSlide = 0;
+		$('body').scrollTop(0);
+		changeSlide(slide + 1);
+		console.log(slide);
+	}
 }
 
 var currentSlide = 0,
