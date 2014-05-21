@@ -1,45 +1,31 @@
-<div>
-	<h1>How do I get it for my site? </h1>
+<div class = "use-it container">
+	<h1>Can I use ?</h1>
 	<div>
-		<h1>Try it out now!</h1>
-		<h3>Try out performance metrics for your website</h3>
-		<p>
-			You would need a
-			<a>local</a>
-			Selenium setup. Install browser-perf globally using
-			<code>npm install -g browser-perf</code>
-			and then use the
-			<a>instructions</a>
-			to run it on the command line.
+		<p class = "step">
+			Install browser-perf from
+			<img src = "img/npm.png"/>
+			. Run it from the
+			<img src = "img/terminal.png"/>
+			or add it to a CI system like
+			<img src = "img/jenkins.png"/>
+			.
 		</p>
-		<h3>Add performance measurement to your Grunt file</h3>
-		<ul>
-			<li>
-				Install
-				<a>perfjankie</a>
-				from npm
-			</li>
-			<li>
-				Install
-				<a>Apache CouchDB</a>
-			</li>
-			<li>
-				Set up Selenium
-				<a>locally</a>
-				, or connect to a service
-			</li>
-			<li>
-				Look at this project's
-				<a>grunt file</a>
-				, and include the perfjankie task.
-			</li>
-		</ul>
-		<h3>As a service - perfmonkey.com</h3>
-		<p>
-			<a>Perfmonkey.com</a>
-			is a service that does all the above. Just CURL a URL everytime your deploy and perfmonkey.com will run the performance tests and give you the results on a dashboard.
-			<br/><br/>
-			<a>Try perfmonkey.com now &raquo;</a>
+
+		<p class = "step">
+			Alternatively, add perfjankie task into
+			<img src = "img/grunt.png"/>
+			build process.
+			<br/>
+			All data and HTML/JS for the graphs are saved in
+			<img src = "img/couchdb.png"/>
+			.
 		</p>
+		<p class = "step">
+			Tests are run using
+			<img src = "img/selenium.png"/>
+			locally, or using services like
+			<img src = "img/saucelabs.png"/> or <img src = "img/browserstack.png"/>
+		</p>
+		<p class = "step">Existing Selenium tests can also be reused to collect metrics from <img src = "img/browsers.png"/></p>
 	</div>
 </div>

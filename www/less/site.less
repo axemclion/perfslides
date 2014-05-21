@@ -54,9 +54,14 @@
 			}
 		}
 		.fixing-regressions {
+			width: 100%;
 			background: white;
 			box-shadow: 0 0 20px #000;
 			padding: 3em;
+			&>div{
+				width: 80%;
+				margin: auto;
+			}
 			.tool {
 				height: 200px;
 				&.chrometool {
@@ -72,118 +77,51 @@
 				}
 			}
 		}
-		.after-measure {
-			.list-group-item {
-				border: 2px #ccc solid;
-				margin: 5px 0;
-			}
-			.number {
-				padding: 0.5em 1em;
-				margin: 10px 10px -10px 10px;
-				background-color: #3498db;
-				border-radius: 10px;
-				font-weight: 700;
-				color: white;
-				position: relative;
-				left: -40px;
-				font-size: 0.8em;
+
+		.rendering-perf{
+			h3{
+				font-size: 3em;
 			}
 		}
+
 		.graphs {
 			text-align: center;
-			img{
+			img {
 				border: SOLID 3px #ccc;
 			}
 		}
-		.perfjankie {
-			.other-tools{
-				text-align: center;
-			}
-			.row {
-				.col-lg-6 {
-					text-align: center;
-					&:first-child {
-						border-right: 3px #ccc solid;
-					}
+		.use-it {
+			p{&:before {
+					font-family: 'Glyphicons Halflings';
+					content: "\e080";
+					font-weight: bold;
+					margin: 0 20px;
 				}
 			}
-		}
-		.browser-perf {
-			padding: 10px;
-			.row {
-				width: 70%;
-				margin: auto;
-				text-align: center;
-			}
-			ol {
-				font-size: 20px;
-				text-align: left;
-				margin: 40px auto 20px auto;
-				list-style: none;
-				text-align: center;
-				li {
-					display: inline-block;
-					color: white;
-					margin: 10px;
-					&:after {
-						width: 0;
-						height: 0;
-						border-top: 22px solid transparent;
-						border-bottom: 22px solid transparent;
-						border-left: 10px solid #5cb85c;
-						content: "";
-						display: inline-block;
-						position: relative;
-						top: 14px;
-					}
-					&:first-child {
-						&:after {
-							border-left: 10px solid #f0ad4e;
-						}
-						em, span {
-							background-color: #f0ad4e;
-						}
-					}
-					&:last-child {
-						&:after {
-							border-left: 10px solid #d9534f !important;
-						}
-						em, span {
-							background-color: #d9534f;
-						}
-					}
-					span, em {
-						background-color: #5cb85c;
-						padding: 10px;
-						margin: 0;
-					}
-					em {
-						margin: 0 -4px 0 -10px;
-					}
-				}
+			img {
+				height: 25px;
 			}
 		}
 		.thankyou {
 			font-family: Lustria;
-			h3{
+			h3 {
 				font-size: 40px;
 			}
 			.row {
 				div {
-					h1{
+					h1 {
 						font-size: 24px;
 					}
-					li{
+					li {
 						font-size: 18px;
 					}
 					width: 100%;
 				}
 			}
-			.contact{
+			.contact {
 				width: 20px;
 				height: 20px;
 			}
-
 		}
 	}
 }

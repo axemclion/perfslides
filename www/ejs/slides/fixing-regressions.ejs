@@ -1,81 +1,89 @@
 <div class = "fixing-regressions container">
-	<h1>Fixing Performance Regressions</h1>
-	<p class = "speaker-notes">
-		Rules, tools, or a combination of rules and tools can be used to fix performance problems
-	</p>
-	<ul class="nav nav-tabs site-only">
-		<li class="active">
-			<a href="#tools" data-toggle="tab">Tools</a>
-		</li>
-		<li>
-			<a href="#rules" data-toggle="tab">Rules</a>
-		</li>
-		<li>
-			<a href="#rulestools" data-toggle="tab">Rules + Tools</a>
-		</li>
-	</ul>
+	<div>
+		<h1>Fixing Performance Regressions</h1>
+		<p class = "speaker-notes">
+			Rules, tools, or a combination of rules and tools can be used to fix performance problems
+		</p>
+		<ul class="nav nav-tabs site-only">
+			<li class="active">
+				<a href="#tools" data-toggle="tab">Tools</a>
+			</li>
+			<li>
+				<a href="#rules" data-toggle="tab">Rules</a>
+			</li>
+			<li>
+				<a href="#rulestools" data-toggle="tab">Rules + Tools</a>
+			</li>
+		</ul>
 
-	<div class="tab-content step">
-		<div class="tab-pane active" id="tools">
-			<h2>Tools<span class = "slide-only faded"> + Rules</span></h2>
-			<div class="row">
-				<div class="col-xs-6 col-md-4">
-					<a href="#" class="thumbnail">
-						<img src="img/chromedev.png" alt="Chrome Developer Tools Screenshot"/>
-					</a>
-				</div>
-				<div class="col-xs-6 col-md-4 step">
-					<a href="#" class="thumbnail">
-						<img src="img/f12.png" alt="..."/>
-					</a>
-				</div>
-				<div class="col-xs-6 col-md-4 step">
-					<a href="#" class="thumbnail">
-						<img src="img/firefox.png" alt="..."/>
-					</a>
+		<div class="tab-content step">
+			<div class="tab-pane active" id="tools">
+				<h2>
+					Tools
+					<span class = "slide-only faded">+ Rules</span>
+				</h2>
+				<div class="row">
+					<div class="col-xs-6 col-md-4">
+						<a href="#" class="thumbnail">
+							<img src="img/chromedev.png" alt="Chrome Developer Tools Screenshot"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 step">
+						<a href="#" class="thumbnail">
+							<img src="img/f12.png" alt="..."/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4 step">
+						<a href="#" class="thumbnail">
+							<img src="img/firefox.png" alt="..."/>
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="tab-pane step" id="rules">
-			<h2><span class = "faded slide-only">Tools + </span>Rules</h2>
-			<ul>
-				<li>
-					Shard the domains to increase the number of parallel requests
-				</li>
-				<li>Enclose expensive javascript inside requestAnimationFrames</li>
-				<li>Minize JS, Images and CSS, always zip over the wire</li>
-				<li>
-					Runtime performance checklist
-					<a href = "http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/"></a>
-				</li>
-				<li class = "slide-only"> <em>Pray to the demo gods before your presentation</em>
-				</li>
-			</ul>
-		</div>
-		<div class="tab-pane step" id="rulestools">
-			<h2>Tools + Rules</h2>
-			<ul>
-				<li>
-					YSlow (
-					<a href = "https://developer.yahoo.com/yslow/">link</a>
-					)
-				</li>
-				<li>
-					Google Page Speed (
-					<a href = "https://developers.google.com/speed/pagespeed/">link</a>
-					)
-				</li>
-				<li>
-					modern.ie Page Scan (
-					<a href = "http://modern.ie">link</a>
-					)
-				</li>
-				<li>
-					Webpagetest.org (
-					<a href = "http://webpagetest.org">link</a>
-					)
-				</li>
-			</ul>
+			<div class="tab-pane step" id="rules">
+				<h2>
+					<span class = "faded slide-only">Tools +</span>
+					Rules
+				</h2>
+				<ul>
+					<li>
+						Shard the domains to increase the number of parallel requests
+					</li>
+					<li>Enclose expensive javascript inside requestAnimationFrames</li>
+					<li>Minize JS, Images and CSS, always zip over the wire</li>
+					<li>
+						Runtime performance checklist
+						<a href = "http://calendar.perfplanet.com/2013/the-runtime-performance-checklist/"></a>
+					</li>
+					<li class = "slide-only"> <em>Pray to the demo gods before your presentation</em>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-pane step" id="rulestools">
+				<h2>Tools + Rules</h2>
+				<ul>
+					<li>
+						YSlow (
+						<a href = "https://developer.yahoo.com/yslow/">link</a>
+						)
+					</li>
+					<li>
+						Google Page Speed (
+						<a href = "https://developers.google.com/speed/pagespeed/">link</a>
+						)
+					</li>
+					<li>
+						modern.ie Page Scan (
+						<a href = "http://modern.ie">link</a>
+						)
+					</li>
+					<li>
+						Webpagetest.org (
+						<a href = "http://webpagetest.org">link</a>
+						)
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
