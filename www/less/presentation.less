@@ -354,15 +354,31 @@ body.presentation {
 				-moz-animation-timing-function: ease-in-out;
 			}
 		}
-		
-		.takeaways {
+		.commit-list {
+			.container {
+				text-align: left;
+				width: 70%;
+				margin: 50px auto;
+				.output {
+					margin: 10px 0 0 20px;
+					li {
+						font-size: 2em;
+						&.empty {
+							list-style: none;
+							margin: 30px 0;
+						}
+					}
+				}
+			}
+		}
+		.results {
 			font-family: Lustria;
 			background-color: white;
 			h1 {
-				margin: 70px 0 70px 0;
+				margin: 30px 0 30px 0;
 			}
 			ul {
-				width: 60%;
+				width: 70%;
 				margin: auto;
 				font-weight: 400;
 				font-size: 30px;
