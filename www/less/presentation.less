@@ -354,19 +354,57 @@ body.presentation {
 				-moz-animation-timing-function: ease-in-out;
 			}
 		}
-		
-		.takeaways {
-			font-family: Lustria;
+		.commit-list {
+			.container {
+				text-align: left;
+				width: 70%;
+				margin: 50px auto;
+				.output {
+					margin: 10px 0 0 20px;
+					li {
+						font-size: 2em;
+						&.empty {
+							list-style: none;
+							margin: 30px 0;
+						}
+					}
+				}
+			}
+		}
+		.results {
 			background-color: white;
 			h1 {
-				margin: 70px 0 70px 0;
+				margin: 30px 0 30px 0;
+				font-family: Lustria;
 			}
 			ul {
-				width: 60%;
-				margin: auto;
+				width: 70%;
+				margin: 50px auto;
 				font-weight: 400;
 				font-size: 30px;
 				text-align: left;
+				li {
+					margin: 10px 0;
+				}
+			}
+			ul.sub-list {
+				width: 90%;
+				margin: auto;
+			}
+		}
+		.use-it {
+			width: 80%;
+			margin: auto;
+			p{
+				font-size: 2em;
+				margin : 70px 0;
+			}
+			img{
+				height: 60px;
+				margin: -10px 10px;
+				&[src='img/npm.png']{
+					height: 40px;
+				}
 			}
 		}
 		.thankyou {
