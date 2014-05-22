@@ -38,6 +38,7 @@ body {
   right: 1em;
   opacity: 0.5;
   -webkit-transform: translateZ(0px);
+  z-index: 100000;
 }
 .slides {
   list-style: none;
@@ -67,6 +68,7 @@ body.presentation {
 }
 .presentation .container {
   width: auto;
+  padding: 0;
 }
 .presentation .slides {
   position: relative;
@@ -106,8 +108,8 @@ body.presentation {
 }
 .presentation .slides .title .author {
   text-align: center;
-  font-size: 20px;
   margin-top: 15%;
+  font-size: 50px;
 }
 .presentation .slides .why-performance h1 {
   margin-top: 15% !important;
@@ -120,35 +122,43 @@ body.presentation {
   background: white;
 }
 .presentation .slides .what-regression h1 {
-  margin-top: 50px;
+  position: relative;
+  top: 40%;
+  font-family: Lustria;
+  font-size: 4em;
 }
 .presentation .slides .what-regression .trollface {
   margin: auto;
-  width: 50% !important;
-  height: 50% !important;
+  width: 30% !important;
+  height: 30% !important;
   background-size: contain !important;
-  box-shadow: none;
   border: none;
 }
+.presentation .slides .what-regression .row {
+  height: 100%;
+  width: 100%;
+}
 .presentation .slides .what-regression .row > div.col-lg-4 {
-  padding: 0;
-  margin-top: -20px;
   position: absolute;
+  padding: 0;
   background: white;
-  width: 60%;
-  left: 20%;
-  height: 80%;
-  box-shadow: 0 0 20px 3px #000;
+  width: 100%;
+  left: 0%;
+  height: 100%;
   color: #000;
+  margin-top: -100px;
 }
 .presentation .slides .what-regression .row > div.col-lg-4 h4 {
   font-size: 60px;
   position: absolute;
+  top: 0;
   width: 98%;
+  padding: 10px 0;
 }
 .presentation .slides .what-regression .row > div.col-lg-4 p {
   position: absolute;
   bottom: 0;
+  padding: 10px 0;
   width: 98%;
   font-weight: 700;
   font-size: 30px;
@@ -167,6 +177,10 @@ body.presentation {
   color: #000;
   background-color: white;
 }
+.presentation .slides .what-regression .row > div.col-lg-4 .images {
+  width: 100%;
+  height: 100%;
+}
 .presentation .slides .what-regression .row > div.col-lg-4 img.slide-only {
   background: no-repeat center center;
   -webkit-background-size: cover;
@@ -181,60 +195,35 @@ body.presentation {
   width: 100%;
   height: 100%;
 }
-.presentation .slides .what-regression .row > div.col-lg-4:first-child {
-  -webkit-transform: rotate(7deg);
-  transform: rotate(7deg);
+.presentation .slides .fixing-regressions {
+  background: #3498db;
 }
-.presentation .slides .what-regression .row > div.col-lg-4:last-child {
-  -webkit-transform: rotate(-7deg);
-  transform: rotate(7deg);
+.presentation .slides .fixing-regressions .content {
+  height: 100%;
 }
-.presentation .slides .fixing-regressions ul.nav.nav-tabs {
-  font-size: 40px;
-  font-weight: bold;
-  margin: 60px auto 60px auto;
-  width: 80%;
-  border-bottom: none;
-  text-align: center;
-}
-.presentation .slides .fixing-regressions ul.nav.nav-tabs > li {
-  float: none;
-  display: inline-block;
-  margin: 0 20px;
-}
-.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a {
-  background: #ECECEC;
-  border-radius: 15px;
-  padding: 10px 20px;
-  display: block;
-  font-family: arial;
-  font-weight: bold;
-  color: #7f7f7f;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #fff;
-  border: 1px solid #a7a7a7;
-  margin: 0px auto;
-  box-shadow: 0px 2px 1px #ffffff inset, 0px -2px 8px #ffffff, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
-  -webkit-transition: box-shadow 0.5s;
-  transition: box-shadow 0.5s;
-}
-.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a i {
-  float: right;
-  margin-top: 2px;
-}
-.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a:hover {
-  box-shadow: 0px 2px 1px #ffffff inset, 0px -2px 20px #ffffff, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
-}
-.presentation .slides .fixing-regressions ul.nav.nav-tabs > li a:active {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px #ffffff, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
-  background: -webkit-linear-gradient(top, #d1d1d1 0%, #ececec 100%);
+.presentation .slides .fixing-regressions h1 {
+  font-family: Lustria;
+  font-weight: 700;
+  color: #fff;
 }
 .presentation .slides .fixing-regressions .tab-content {
-  width: 80%;
+  width: 100%;
+  height: 80%;
   margin: auto;
   font-size: 30px;
   font-weight: 400;
   text-align: left;
+  padding: 0;
+  margin-top: -85px;
+  padding-top: 85px;
+  position: relative;
+}
+.presentation .slides .fixing-regressions .tab-content .tab-pane {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: #fafafa;
 }
 .presentation .slides .fixing-regressions .tab-content h2 {
   text-align: center;
@@ -242,35 +231,136 @@ body.presentation {
   font-weight: 700;
   margin-bottom: 40px;
 }
-.presentation .slides .fixing-regressions .tab-content #wisdom {
+.presentation .slides .fixing-regressions .tab-content #tools .row {
+  margin: 0;
+}
+.presentation .slides .fixing-regressions .tab-content #tools .row .col-md-4 {
+  width: 80%;
+  position: absolute;
+  margin: 0 10%;
+}
+.presentation .slides .fixing-regressions .tab-content #tools .row .col-md-4:first-child {
+  -webkit-transform: rotate(10deg);
+}
+.presentation .slides .fixing-regressions .tab-content #tools .row .col-md-4:last-child {
+  -webkit-transform: rotate(-7deg);
+}
+.presentation .slides .fixing-regressions .tab-content #tools .row .col-md-4 a {
+  background: transparent;
+  border: none;
+}
+.presentation .slides .fixing-regressions .tab-content #tools .row .col-md-4 a img {
+  border: SOLID 1px #333;
+}
+.presentation .slides .fixing-regressions .tab-content #rules ul,
+.presentation .slides .fixing-regressions .tab-content #rulestools ul {
+  margin: 0 10%;
+}
+.presentation .slides .fixing-regressions .tab-content .faded {
+  opacity: 0.2;
+  color: #cccccc;
+}
+.presentation .slides .rendering-perf h3 {
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+.presentation .slides .rendering-perf .browsers {
+  padding: 0;
+  margin-top: 50px;
+}
+.presentation .slides .rendering-perf .browsers li {
+  padding: 10px 0 0 0;
+  margin: 0 5px;
+  padding: 5px;
+  border: solid 5px #666;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+}
+.presentation .slides .rendering-perf .browsers li .img {
+  display: block;
+  height: 80px;
+  width: 80px;
+  background-image: url('../img/browsers.png');
+  background-repeat: no-repeat;
+  background-size: 240px;
+  border: none;
+  margin-bottom: 0;
+  background-position: 0px;
+  background-color: transparent;
+}
+.presentation .slides .rendering-perf .browsers li .img.ie {
+  background-position: -160px 0px;
+}
+.presentation .slides .rendering-perf .browsers li .img.chrome {
+  background-position: -80px 0px;
+}
+.presentation .slides .rendering-perf .browser-perf-tool {
+  width: 80%;
+  margin: -10px 10% 10px 10%;
+  border: SOLID 5px #666;
+  padding: 5px 0 10px 0;
+  border-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #fefefe;
+}
+.presentation .slides .rendering-perf .browser-perf-tool h1 {
+  font-family: Lustria;
+  font-weight: bold;
+}
+.presentation .slides .rendering-perf .browser-perf-tool ol {
+  width: 80%;
+  font-size: 20px;
+  text-align: left;
+  margin: 20px auto;
+  list-style: none;
   text-align: center;
 }
-.presentation .slides .after-measure {
-  background-color: #3498db;
+.presentation .slides .rendering-perf .browser-perf-tool ol li {
+  display: inline-block;
   color: white;
 }
-.presentation .slides .after-measure h1 {
-  margin-top: 40px;
-  font-size: 60px;
+.presentation .slides .rendering-perf .browser-perf-tool ol li:after {
+  width: 0;
+  height: 0;
+  border-top: 31px solid transparent;
+  border-bottom: 31px solid transparent;
+  border-left: 30px solid #5cb85c;
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 24px;
 }
-.presentation .slides .after-measure ul.list-group {
-  text-align: left;
-  width: 70%;
-  margin: 40px auto 0 auto;
+.presentation .slides .rendering-perf .browser-perf-tool ol li:first-child:after {
+  border-left: 30px solid #f0ad4e;
 }
-.presentation .slides .after-measure ul.list-group > .list-group-item {
-  border: none;
-  margin: 10px 0 0 0;
-  padding: 0;
-  background: none;
-  font-weight: 400;
-  font-size: 35px;
+.presentation .slides .rendering-perf .browser-perf-tool ol li:first-child em {
+  background-color: #f0ad4e;
 }
-.presentation .slides .after-measure ul.list-group > .list-group-item .number {
-  margin: 10px;
+.presentation .slides .rendering-perf .browser-perf-tool ol li:last-child:after {
+  border-left: 30px solid #d9534f !important;
 }
-.presentation .slides .after-measure ul.list-group > .list-group-item .number:after {
-  content: ".";
+.presentation .slides .rendering-perf .browser-perf-tool ol li:last-child em {
+  background-color: #d9534f;
+}
+.presentation .slides .rendering-perf .browser-perf-tool ol li em {
+  background-color: #5cb85c;
+  padding: 20px;
+  margin: 0;
+  font-weight: bold;
+  font-style: normal;
+  height: 20px;
+}
+.presentation .slides .rendering-perf .perfjankie,
+.presentation .slides .rendering-perf .couchdb {
+  border: SOLID 5px #666;
+  padding: 10px;
+  width: 80%;
+  margin: 10px 10%;
+  background: white;
 }
 .presentation .slides .graphs .carousel {
   height: 100%;
@@ -285,82 +375,14 @@ body.presentation {
   bottom: 0;
   left: 0;
 }
-.presentation .slides .browser-perf ol {
-  width: 70%;
-  font-size: 40px;
-  text-align: left;
-  margin: 20px auto 80px auto;
-  list-style: none;
-  text-align: center;
-}
-.presentation .slides .browser-perf ol li {
-  display: inline-block;
-  color: white;
-}
-.presentation .slides .browser-perf ol li:after {
-  width: 0;
-  height: 0;
-  border-top: 44px solid transparent;
-  border-bottom: 44px solid transparent;
-  border-left: 30px solid #5cb85c;
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: 30px;
-}
-.presentation .slides .browser-perf ol li:first-child:after {
-  border-left: 30px solid #f0ad4e;
-}
-.presentation .slides .browser-perf ol li:first-child em {
-  background-color: #f0ad4e;
-}
-.presentation .slides .browser-perf ol li:last-child:after {
-  border-left: 30px solid #d9534f !important;
-}
-.presentation .slides .browser-perf ol li:last-child em {
-  background-color: #d9534f;
-}
-.presentation .slides .browser-perf ol li em {
-  background-color: #5cb85c;
-  padding: 20px;
-  margin: 0;
-  font-weight: bold;
-  font-style: normal;
-  height: 20px;
-}
-.presentation .slides .browser-perf .row {
-  font-weight: 400;
-  font-size: 30px;
-  width: 70%;
-  margin: auto;
-}
-.presentation .slides .browser-perf .row > div {
-  height: 100%;
-}
-.presentation .slides .browser-perf .row > div:first-child {
-  border-right: 3px SOLID #ccc;
-}
-.presentation .slides .browser-perf .row > div:last-child {
-  border-left: 3px SOLID #ccc;
-}
-.presentation .slides .perfjankie ul {
-  width: 60%;
-  margin: auto;
-  font-weight: 400;
-  font-size: 25px;
-  text-align: left;
-}
-.presentation .slides .perfjankie h1 {
-  margin-top: 40px;
-}
-.presentation .slides .demo ul {
-  width: 60%;
-  margin: auto;
-  text-align: left;
+.presentation .slides .demo h1 {
+  font-size: 80px;
+  font-family: Lustria;
+  margin-top: 20px;
 }
 .presentation .slides .demo .tardis {
-  position: absolute;
-  right: 1%;
+  text-align: center;
+  margin-top: 10%;
   width: 200px;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -378,19 +400,56 @@ body.presentation {
   -moz-animation-name: blink;
   -moz-animation-timing-function: ease-in-out;
 }
-.presentation .slides .takeaways {
-  font-family: Lustria;
+.presentation .slides .commit-list .container {
+  text-align: left;
+  width: 70%;
+  margin: 50px auto;
+}
+.presentation .slides .commit-list .container .output {
+  margin: 10px 0 0 20px;
+}
+.presentation .slides .commit-list .container .output li {
+  font-size: 2em;
+}
+.presentation .slides .commit-list .container .output li.empty {
+  list-style: none;
+  margin: 30px 0;
+}
+.presentation .slides .results {
   background-color: white;
 }
-.presentation .slides .takeaways h1 {
-  margin: 70px 0 70px 0;
+.presentation .slides .results h1 {
+  margin: 30px 0 30px 0;
+  font-family: Lustria;
 }
-.presentation .slides .takeaways ul {
-  width: 60%;
-  margin: auto;
+.presentation .slides .results ul {
+  width: 70%;
+  margin: 50px auto;
   font-weight: 400;
   font-size: 30px;
   text-align: left;
+}
+.presentation .slides .results ul li {
+  margin: 10px 0;
+}
+.presentation .slides .results ul.sub-list {
+  width: 90%;
+  margin: auto;
+}
+.presentation .slides .use-it {
+  width: 80%;
+  margin: auto;
+}
+.presentation .slides .use-it p {
+  font-size: 2em;
+  margin: 70px 0;
+}
+.presentation .slides .use-it img {
+  height: 60px;
+  margin: -10px 10px;
+}
+.presentation .slides .use-it img[src='img/npm.png'] {
+  height: 40px;
 }
 .presentation .slides .thankyou {
   background-color: white;
@@ -498,9 +557,14 @@ body.presentation {
   padding: 10px;
 }
 .site .slides .fixing-regressions {
+  width: 100%;
   background: white;
   box-shadow: 0 0 20px #000;
   padding: 3em;
+}
+.site .slides .fixing-regressions > div {
+  width: 80%;
+  margin: auto;
 }
 .site .slides .fixing-regressions .tool {
   height: 200px;
@@ -516,20 +580,8 @@ body.presentation {
   height: 200px;
   margin: 2em;
 }
-.site .slides .after-measure .list-group-item {
-  border: 2px #ccc solid;
-  margin: 5px 0;
-}
-.site .slides .after-measure .number {
-  padding: 0.5em 1em;
-  margin: 10px 10px -10px 10px;
-  background-color: #3498db;
-  border-radius: 10px;
-  font-weight: 700;
-  color: white;
-  position: relative;
-  left: -40px;
-  font-size: 0.8em;
+.site .slides .rendering-perf h3 {
+  font-size: 3em;
 }
 .site .slides .graphs {
   text-align: center;
@@ -537,68 +589,14 @@ body.presentation {
 .site .slides .graphs img {
   border: SOLID 3px #ccc;
 }
-.site .slides .perfjankie .other-tools {
-  text-align: center;
+.site .slides .use-it p:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\e080";
+  font-weight: bold;
+  margin: 0 20px;
 }
-.site .slides .perfjankie .row .col-lg-6 {
-  text-align: center;
-}
-.site .slides .perfjankie .row .col-lg-6:first-child {
-  border-right: 3px #ccc solid;
-}
-.site .slides .browser-perf {
-  padding: 10px;
-}
-.site .slides .browser-perf .row {
-  width: 70%;
-  margin: auto;
-  text-align: center;
-}
-.site .slides .browser-perf ol {
-  font-size: 20px;
-  text-align: left;
-  margin: 40px auto 20px auto;
-  list-style: none;
-  text-align: center;
-}
-.site .slides .browser-perf ol li {
-  display: inline-block;
-  color: white;
-  margin: 10px;
-}
-.site .slides .browser-perf ol li:after {
-  width: 0;
-  height: 0;
-  border-top: 22px solid transparent;
-  border-bottom: 22px solid transparent;
-  border-left: 10px solid #5cb85c;
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: 14px;
-}
-.site .slides .browser-perf ol li:first-child:after {
-  border-left: 10px solid #f0ad4e;
-}
-.site .slides .browser-perf ol li:first-child em,
-.site .slides .browser-perf ol li:first-child span {
-  background-color: #f0ad4e;
-}
-.site .slides .browser-perf ol li:last-child:after {
-  border-left: 10px solid #d9534f !important;
-}
-.site .slides .browser-perf ol li:last-child em,
-.site .slides .browser-perf ol li:last-child span {
-  background-color: #d9534f;
-}
-.site .slides .browser-perf ol li span,
-.site .slides .browser-perf ol li em {
-  background-color: #5cb85c;
-  padding: 10px;
-  margin: 0;
-}
-.site .slides .browser-perf ol li em {
-  margin: 0 -4px 0 -10px;
+.site .slides .use-it img {
+  height: 25px;
 }
 .site .slides .thankyou {
   font-family: Lustria;
@@ -618,4 +616,13 @@ body.presentation {
 .site .slides .thankyou .contact {
   width: 20px;
   height: 20px;
+}
+.scrollCount {
+  -webkit-transform: translateZ(0);
+  position: fixed;
+  top: 1%;
+  right: 0;
+  box-shadow: 0 0 10px 3px rgba(55, 55, 55, 0.5);
+  padding: 1%;
+  background: white;
 }

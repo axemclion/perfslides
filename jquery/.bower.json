@@ -23,5 +23,15 @@
     "jquery",
     "javascript",
     "library"
-  ]
+  ],
+  "homepage": "https://github.com/jquery/jquery",
+  "_release": "2.1.1-rc2",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.1-rc2",
+    "commit": "c2fdcaaacd4d7f8479b2196525330c1738e30cd3"
+  },
+  "_source": "git://github.com/jquery/jquery.git",
+  "_target": "~2.1.0",
+  "_originalSource": "jquery"
 }
