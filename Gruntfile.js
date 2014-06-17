@@ -69,6 +69,26 @@ module.exports = function(grunt) {
 						updateSite: true
 					}
 				}
+			},
+			remote: {
+				options: {
+					repeat: 3,
+					selenium: {
+						hostname: "ondemand.saucelabs.com",
+						port: "80",
+						user: process.env.SAUCE_USERNAME,
+						pwd: process.env.SAUCE_ACCESSKEY
+					},
+					browsers: [{
+						browserName: 'chrome',
+						version: 34
+					}],
+					couch: {
+						server: 'http://axemclion.cloudant.com',
+						database: 'perfslides',
+						updateSite: true
+					}
+				}
 			}
 		}
 	});
