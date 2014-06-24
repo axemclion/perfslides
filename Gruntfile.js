@@ -65,6 +65,8 @@ module.exports = function(grunt) {
 					browsers: 'chrome',
 					couch: {
 						server: 'http://localhost:5984',
+						username: 'admin_user',
+						pwd: 'admin_pass',
 						database: 'perfslides',
 						updateSite: true
 					}
@@ -85,6 +87,8 @@ module.exports = function(grunt) {
 					}],
 					couch: {
 						server: 'http://axemclion.cloudant.com',
+						username: process.env.COUCH_USER,
+						pwd: process.env.COUCH_PWD,
 						database: 'perfslides',
 						updateSite: true
 					}
