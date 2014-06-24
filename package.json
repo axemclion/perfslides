@@ -17,7 +17,7 @@
     "grunt-contrib-copy": "^0.5.0",
     "load-grunt-tasks": "^0.4.0",
     "grunt-ejs": "^0.1.0",
-    "perfjankie": "^0.1.4"
+    "perfjankie": "^0.1.9"
   },
   "repository": {
     "type": "git",
