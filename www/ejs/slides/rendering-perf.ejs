@@ -1,10 +1,8 @@
 <div class = "rendering-perf container">
-	<p class = "speaker-notes">
-		This presentation is about browser rendering performance, and using variaous techniques to automate the collection of browser rendering performance metrics.
-		<a href = "http://npmjs.org/package/browser-perf">browser-perf</a>
-		is a tool that can help you measure browser rendering performance.
-	</p>
-	<h3>Measure rendering performance</h3>
+	<h3>
+		<small class = "site-only">Some tools to</small>
+		Measure rendering performance
+	</h3>
 	<div class = "step browsers">
 		<ul class = "list-inline">
 			<li>
@@ -19,22 +17,40 @@
 		</ul>
 	</div>
 	<div class = "step browser-perf-tool">
-		<h1><small>http://npmjs.org/package/</small>browser-perf</h1>
+		<h1>
+			<small>http://npmjs.org/package/</small>
+			browser-perf
+		</h1>
+		<div class = "speaker-notes">
+			is a NodeJS based tool that measures the runtime performance of web pages.
+		</div>
 		<ol>
-			<li class = "step">
-				<span class = "speaker-notes">Run Selenium</span> <em>Actions</em>
+			<li class = "step"> <em>Actions</em>
+				<div class = "speaker-notes">
+					The tool measures performance information when a user scenario is run. User actions are performed using Selenium scripts. Typical scenarios for collecting performance information could be a shopping website checkout process, or even a simple page scroll.
+				</div>
+			</li>
+			<li class = "step"> <em>Probes</em>
+				<div class = "speaker-notes">
+					This tool simply automates the manual process of looking at developer tools to identiy performance anti-patterns. It collects data from sources like Chrome Developer tools profiling timelines, about:tracing, or WPA/Xperf in case of IE.
+				</div>
 			</li>
 			<li class = "step">
-				<span class = "speaker-notes">Read Data from</span> <em>Probes</em>
-			</li>
-			<li class = "step">
-				<span class = "speaker-notes">Process to get</span>
 				<em>Metrics</em>
+				<div class = "speaker-notes">
+					Once all the data is collected, it is combined into actionable metrics. Some of the metrics include the average time required to draw each frame, time spent calculating styles or layouts.
+				</div>
 			</li>
 		</ol>
 	</div>
 	<div class = "step perfjankie">
-		<h1><small>http://npmjs.org/package/</small>Perfjankie</h1>
+		<h1>
+			<small>http://npmjs.org/package/</small>
+			Perfjankie
+		</h1>
+		<p class = "speaker-notes">
+			Collecting performance information once is great, but it would be even more valuable is this data is available over time. Each new commit can then be compared against baseline measures, and single commits causes trouble can be weeded out. This would also give developers, a good handle on how adding additional features to a website may impact website performance. 
+		</p>
 		<p>Grunt task, run browser-perf, save data to couchdb</p>
 	</div>
 	<div class = "step couchdb">

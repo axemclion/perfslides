@@ -3,10 +3,16 @@
     <h1>Fixing Performance Regressions - Everytime</h1>
     <div class = "row">
       <div class = "col-md-6 text-left">
+        <p class = "speaker-notes">
+          Though most developers see value in running performance tests, expecting these tests to be run for every deploy is hard. Most of these tests have to be run manually, and are usually run when reacting to performance issues. 
+          <br/>
+          It would be even better if performance profiling can actually be automated. Just like unit tests are the defense against functional regressions, these automated performance tests could check for performance regressions. Like the unit tests, adding these to a coninuous integration server will add more value. 
+        </p>
+
         <ul>
           <li>Run profiling for every commit - look for perf anit-patterns</li>
-          <li>Can this manual task be automated ? </li>
-          <li>Once automated, can it be added to continuous integration</li>
+          <li class = "step">Can this manual task be automated ? </li>
+          <li class = "step">Once automated, can it be added to continuous integration</li>
         </ul>
       </div>
       <div class = "col-md-6">
