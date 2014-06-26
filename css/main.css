@@ -181,7 +181,7 @@ body.presentation {
   width: 100%;
   height: 100%;
 }
-.presentation .slides .what-regression .row > div.col-lg-4 img.slide-only {
+.presentation .slides .what-regression .row > div.col-lg-4 .img.slide-only {
   background: no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -260,6 +260,18 @@ body.presentation {
   opacity: 0.2;
   color: #cccccc;
 }
+.presentation .slides .fixing-everytime {
+  background: white;
+}
+.presentation .slides .fixing-everytime .row {
+  margin-top: 5%;
+}
+.presentation .slides .fixing-everytime .row ul {
+  margin-left: 10%;
+}
+.presentation .slides .fixing-everytime .row ul li {
+  font-size: 2em;
+}
 .presentation .slides .rendering-perf h3 {
   background: #3498db;
   color: white;
@@ -299,12 +311,11 @@ body.presentation {
 }
 .presentation .slides .rendering-perf .browser-perf-tool {
   width: 80%;
+  position: relative;
   margin: -10px 10% 10px 10%;
   border: SOLID 5px #666;
   padding: 5px 0 10px 0;
   border-radius: 100px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
   background: #fefefe;
 }
 .presentation .slides .rendering-perf .browser-perf-tool h1 {
@@ -362,6 +373,14 @@ body.presentation {
   margin: 10px 10%;
   background: white;
 }
+.presentation .slides .rendering-perf .perfjankie {
+  padding: 250px 10px 40px 9px;
+  width: 86%;
+  margin: -235px 7%;
+}
+.presentation .slides .rendering-perf .couchdb {
+  margin-top: 250px;
+}
 .presentation .slides .graphs .carousel {
   height: 100%;
 }
@@ -375,30 +394,16 @@ body.presentation {
   bottom: 0;
   left: 0;
 }
+.presentation .slides .demo {
+  background: right url('../img/tardis.jpg');
+  background-size: cover;
+}
 .presentation .slides .demo h1 {
   font-size: 80px;
-  font-family: Lustria;
-  margin-top: 20px;
-}
-.presentation .slides .demo .tardis {
-  text-align: center;
-  margin-top: 10%;
-  width: 200px;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-animation-direction: normal;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: 20;
-  -webkit-animation-name: blink;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-direction: normal;
-  -moz-animation-duration: 2s;
-  -moz-animation-iteration-count: 20;
-  -moz-animation-name: blink;
-  -moz-animation-timing-function: ease-in-out;
+  font-weight: bold;
+  color: black;
+  margin-top: 25%;
+  margin-left: -30px;
 }
 .presentation .slides .commit-list .container {
   text-align: left;
@@ -411,9 +416,8 @@ body.presentation {
 .presentation .slides .commit-list .container .output li {
   font-size: 2em;
 }
-.presentation .slides .commit-list .container .output li.empty {
-  list-style: none;
-  margin: 30px 0;
+.presentation .slides .commit-list .container .output li.sep {
+  margin: 40px 0 0 0;
 }
 .presentation .slides .results {
   background-color: white;
@@ -482,28 +486,6 @@ body.presentation {
 .presentation .slides .thankyou .row div ul li img {
   width: 25px;
   height: 25px;
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 .site .slide-only {
   display: none !important;
@@ -580,8 +562,26 @@ body.presentation {
   height: 200px;
   margin: 2em;
 }
+.site .slides .fixing-everytime img {
+  border: SOLID #ccc 2px;
+  padding: 10px;
+  background-color: white;
+}
 .site .slides .rendering-perf h3 {
   font-size: 3em;
+}
+.site .slides .demo {
+  background: right fixed url('../img/tardis.jpg');
+  background-size: cover;
+  color: black;
+}
+.site .slides .demo .speaker-notes {
+  background-color: rgba(200, 200, 200, 0.5);
+  padding: 30px 10px;
+  margin-bottom: 20px;
+}
+.site .slides .demo .speaker-notes a {
+  color: darkblue;
 }
 .site .slides .graphs {
   text-align: center;
@@ -616,13 +616,4 @@ body.presentation {
 .site .slides .thankyou .contact {
   width: 20px;
   height: 20px;
-}
-.scrollCount {
-  -webkit-transform: translateZ(0);
-  position: fixed;
-  top: 1%;
-  right: 0;
-  box-shadow: 0 0 10px 3px rgba(55, 55, 55, 0.5);
-  padding: 1%;
-  background: white;
 }
