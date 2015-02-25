@@ -1,5 +1,0 @@
-Things to do 
-
-- SVG for Arch diagram
-- Twitter login example
-- ToDo MVC selenium script example - with Angular

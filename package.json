@@ -4,7 +4,8 @@
   "description": "A sample website to demonstrate the use of browser-perf and perfkanie",
   "main": "lib/index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "start": "grunt"
   },
   "author": "Parashuram <code@r.nparashuram.com>",
   "license": "Apache 2.0",
